@@ -1,0 +1,11 @@
+use("my_store")
+db.prodcutos.insertone({
+    _id:1,
+    name: "Producto 1",
+    price :1000
+})
+
+db.productos.insertone({
+    name : "Producto 2",
+    price : 2000
+})
