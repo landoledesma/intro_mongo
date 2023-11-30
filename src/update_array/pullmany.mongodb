@@ -1,0 +1,11 @@
+use("my_store")
+
+db.inventory.updateMany({},
+    {
+    $pull: {
+        tags : "headphone"
+    }
+})
+
+
+db.inventory.find()
