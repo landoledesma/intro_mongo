@@ -1,0 +1,15 @@
+use("my_store")
+
+db.products.updateOne(
+    //query
+    {_id : 2},
+    {
+        $set: {
+            name:'Change name',
+            price: 3000,
+            tags : ['A','B']
+        }
+    }
+    )
+
+db.products.find()

@@ -1,0 +1,14 @@
+use("sample_training")
+
+db.zips.updateMany(
+    //QUERY
+    {city : "CLEVELAND"},
+    //update op
+    {
+        $set: {
+            Myatt: "hola"
+        }
+    }
+)
+
+db.zips.find({city : "CLEVELAND"})
