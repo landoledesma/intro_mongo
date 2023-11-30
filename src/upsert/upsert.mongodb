@@ -1,0 +1,16 @@
+use("my_store")
+
+db.iot.updateOne({
+    sensor: "A001",
+    date: "2023-01-04",
+},{
+     $push :{
+        readings : 2323
+    
+     }   
+},
+{
+    upsert: true
+})
+
+db.iot.find()
