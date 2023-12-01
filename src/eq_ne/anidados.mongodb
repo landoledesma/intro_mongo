@@ -1,0 +1,5 @@
+use("my_store")
+db.inventory.find()
+// usando find en objetos anindados
+//NOTA: siempre que esté la notación . (punto), la clave debe ir en "" (comnnillas)
+db.inventory.find({"item.code": "123"})

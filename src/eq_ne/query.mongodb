@@ -1,0 +1,11 @@
+use("my_store")
+// podemos utilizarlos para actualizar 
+//de forma selectiva ciertos documentos
+db.inventory.updateMany(
+    {qty: {$ne: 20}},
+    {
+        $inc: {
+            qty: 10
+        }
+    }
+)

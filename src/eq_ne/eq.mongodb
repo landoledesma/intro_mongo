@@ -1,0 +1,9 @@
+use("my_store")
+db.inventory.find()
+
+// usando equal implicitamente
+db.inventory.find({qty: 20})
+
+// usando equal explicitamente
+db.inventory.find({qty: {$eq: 20}})
+
