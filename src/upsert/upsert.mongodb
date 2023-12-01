@@ -1,11 +1,12 @@
 use("my_store")
+db.iot.find()
 
 db.iot.updateOne({
     sensor: "A001",
     date: "2023-01-04",
 },{
      $push :{
-        readings : 2323
+        readings : 23234
     
      }   
 },
