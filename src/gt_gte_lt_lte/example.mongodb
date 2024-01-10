@@ -1,0 +1,12 @@
+/*
+use("my_store")
+db.inventory.find({
+    "item.code":"123",
+    qty:{$gte:20,$lte:25}
+})
+*/
+use("my_store")
+db.inventory.find({
+    "item.code":{$ne:"123"},
+    qty:{$gte:20,$lte:25}
+})
