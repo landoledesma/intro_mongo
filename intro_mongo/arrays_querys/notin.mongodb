@@ -1,0 +1,7 @@
+use("my_store")
+
+//db.survey.find()
+
+//db.inventory.find({qty:{$nin:[20,25]}})
+
+db.inventory.find({tags:{$nin:["book","electronics"]}})

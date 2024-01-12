@@ -1,10 +1,12 @@
 use("my_store")
-
 //buscar la palabra agreganfo i para que sea indiferente  a las mayusculas
 db.inventory.find({"item.description":{$regex:/line/i}})
 // todos aquellos que terminen
+use("my_store")
 db.inventory.find({"item.description":{$regex:/line$/i}})
 //todos aquellos que empiecen
+use("my_store")
 db.inventory.find({"item.description":{$regex:/^single/i}})
 //tomando en cuenta el salto de linea m -> multiline
+use("my_store")
 db.inventory.find({"item.description":{$regex:/^s/im}})

@@ -1,0 +1,19 @@
+use("my_store")
+
+
+db.inventory.find({tags:["book"]})
+//coincidencia exacta
+use("my_store")
+db.inventory.find({tags:["school","book"]})
+// arrays all
+use("my_store")
+db.inventory.find({tags:{$all:["school","book"]}})
+//size 
+use("my_store")
+db.inventory.find({tags:{$size:2}})
+//element match
+use("my_store")
+//db.survey.find({results:{$elemMatch:{product:"xyz"}}})
+db.survey.find({results:{$elemMatch:{product:"xyz",score:{$gte:7}}}})
+
+
