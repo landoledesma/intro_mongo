@@ -1,0 +1,6 @@
+use("sample_training")
+
+//and implicit
+db.inspections.find({
+    result: {$not:{ $regex: /Unable to Locate/ }}
+})

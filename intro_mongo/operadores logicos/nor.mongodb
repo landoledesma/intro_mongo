@@ -1,0 +1,17 @@
+use("sample_training")
+
+/*
+db.inspections.find({
+    $nor:[{sector:"Tax Preparers - 891"
+    },{result:"Unable to Locate"}]
+    
+}).count
+*/
+//and implicit
+db.inspections.find({
+    $nor:[{sector:"No Violation Issued"
+    },{result:"Unable to Locate"}]
+    
+},
+{result:1,
+_id:0}).count
