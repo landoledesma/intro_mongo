@@ -1,0 +1,5 @@
+use("my_store")
+
+// 1=0 -10, A-Z
+// -11=10-0, Z-A
+db.categories.find().skip(4).limit(2)
